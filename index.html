@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome Studio Medico - Cure Mediche di Qualità</title>
+    <!-- Tailwind CSS CDN per uno styling rapido e responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Stili personalizzati per il font Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden; /* Evita lo scroll orizzontale */
+        }
+        /* Assicurati che lo scroll sia liscio per i link interni */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animazioni personalizzate */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Applica le animazioni a elementi specifici */
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-scaleIn {
+            animation: scaleIn 0.7s ease-out forwards;
+        }
+
+        .animate-slideInLeft {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .animate-slideInRight {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        /* Ritardi per le animazioni sequenziali */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-700 { animation-delay: 0.7s; }
+        .delay-800 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 text-gray-800">
+
+    <!-- Header con Logo/Nome Studio e Navigazione -->
+    <header class="bg-gradient-to-r from-blue-900 to-indigo-900 text-white shadow-2xl sticky top-0 z-50 animate-fadeInUp">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-2xl md:text-3xl font-extrabold tracking-wide rounded-lg p-2">
+                <a href="#" class="hover:text-blue-200 transition duration-300 ease-in-out">
+                    Studio Medico [Nome]
+                </a>
+            </div>
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
+                    <li><a href="#chi-siamo" class="block py-2 px-4 rounded-full hover:bg-white hover:text-blue-800 transition duration-300 ease-in-out font-medium shadow-md">Chi Siamo</a></li>
+                    <li><a href="#servizi" class="block py-2 px-4 rounded-full hover:bg-white hover:text-blue-800 transition duration-300 ease-in-out font-medium shadow-md">Servizi</a></li>
+                    <li><a href="#team" class="block py-2 px-4 rounded-full hover:bg-white hover:text-blue-800 transition duration-300 ease-in-out font-medium shadow-md">Team</a></li>
+                    <li><a href="#contatti" class="block py-2 px-4 rounded-full hover:bg-white hover:text-blue-800 transition duration-300 ease-in-out font-medium shadow-md">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-900 text-white py-28 md:py-48 text-center shadow-3xl rounded-b-4xl transform -translate-y-px overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-6 leading-tight drop-shadow-lg animate-fadeInUp">
+                La Tua Salute è la Nostra Priorità Assoluta
+            </h1>
+            <p class="text-lg sm:text-xl lg:text-2xl mb-12 opacity-95 max-w-3xl mx-auto drop-shadow animate-fadeInUp delay-200">
+                Offriamo cure mediche professionali e personalizzate in un ambiente accogliente e all'avanguardia.
+            </p>
+            <a href="#contatti" class="inline-block bg-white text-blue-800 hover:bg-blue-100 font-bold py-4 px-12 rounded-full shadow-2xl transition duration-300 ease-in-out transform hover:scale-105 active:scale-95 border-2 border-transparent hover:border-blue-400 animate-scaleIn delay-400">
+                Prenota una Visita Ora
+            </a>
+        </div>
+    </section>
+
+    <!-- Sezione Chi Siamo -->
+    <section id="chi-siamo" class="py-20 md:py-32 bg-white shadow-2xl rounded-3xl mx-auto mt-20 max-w-6xl px-8 md:px-16 transform -translate-y-12 animate-fadeInUp">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-blue-900 mb-16 relative">
+                Chi Siamo
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-blue-600 rounded-full"></span>
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-16">
+                <div class="md:w-1/2 animate-slideInLeft delay-400">
+                    <p class="text-lg leading-relaxed mb-6 text-gray-700">
+                        Lo Studio Medico [Nome Studio] è un punto di riferimento per la salute e il benessere nella comunità di [La Tua Città]. Fondato nel [Anno di Fondazione], ci dedichiamo a offrire un'assistenza medica di alta qualità, con un'attenzione particolare alle esigenze individuali di ogni paziente, combinando la tradizione medica con le più recenti innovazioni mediche.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        Il nostro team di medici e professionisti sanitari è altamente qualificato, costantemente aggiornato sulle ultime scoperte e si impegna a garantire un percorso di cura completo, dalla prevenzione alla diagnosi e al trattamento. Crediamo in un approccio olistico alla salute, dove il paziente è sempre al centro della nostra attenzione, in un ambiente che ispira fiducia, tranquillità e professionalità. La tua salute è la nostra missione.
+                    </p>
+                </div>
+                <div class="md:w-1/2 flex justify-center animate-slideInRight delay-500">
+                    <!-- Placeholder per un'immagine dello studio o del team -->
+                    <img src="https://placehold.co/600x400/b3d9ff/003366?text=Ambiente+Accogliente" alt="Interni dello Studio Medico" class="rounded-2xl shadow-3xl border-6 border-blue-300 transform hover:scale-102 transition duration-500 ease-in-out">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione I Nostri Servizi -->
+    <section id="servizi" class="py-20 md:py-32 bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 mx-auto mt-20 max-w-6xl px-8 md:px-16 rounded-3xl shadow-2xl animate-fadeInUp delay-200">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-blue-900 mb-16 relative">
+                I Nostri Servizi Specializzati
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-blue-700 rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Servizio 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out border border-blue-300 transform hover:-translate-y-2 animate-scaleIn delay-100">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4">Visite Mediche Generali</h3>
+                    <p class="text-gray-700 leading-relaxed">Consulenze mediche di base, controllo dello stato di salute generale, rilascio di certificati e prescrizioni. La base per la tua salute.</p>
+                </div>
+                <!-- Servizio 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out border border-blue-300 transform hover:-translate-y-2 animate-scaleIn delay-200">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4">Prevenzione e Screening</h3>
+                    <p class="text-gray-700 leading-relaxed">Programmi personalizzati per la prevenzione di malattie e screening periodici per una diagnosi precoce, essenziali per il benessere a lungo termine.</p>
+                </div>
+                <!-- Servizio 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out border border-blue-300 transform hover:-translate-y-2 animate-scaleIn delay-300">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4">Cardiologia</h3>
+                    <p class="text-gray-700 leading-relaxed">Diagnosi e trattamento delle patologie cardiovascolari, ECG, holter pressorio e cardiaco con specialisti dedicati.</p>
+                </div>
+                <!-- Servizio 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out border border-blue-300 transform hover:-translate-y-2 animate-scaleIn delay-400">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4">Dermatologia</h3>
+                    <p class="text-gray-700 leading-relaxed">Visite dermatologiche complete, mappatura dei nei, trattamenti per varie patologie della pelle con tecnologie avanzate.</p>
+                </div>
+                <!-- Servizio 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out border border-blue-300 transform hover:-translate-y-2 animate-scaleIn delay-500">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4">Fisioterapia e Riabilitazione</h3>
+                    <p class="text-gray-700 leading-relaxed">Riabilitazione post-traumatica, terapie manuali e strumentali all'avanguardia per il recupero funzionale completo.</p>
+                </div>
+                <!-- Servizio 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out border border-blue-300 transform hover:-translate-y-2 animate-scaleIn delay-600">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4">Pediatria</h3>
+                    <p class="text-gray-700 leading-relaxed">Visite pediatriche, controlli di crescita, vaccinazioni pediatriche e consulenze approfondite per genitori.</p>
+                </div>
+                <!-- Aggiungi più servizi se necessario, seguendo lo stesso formato -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Il Nostro Team (Esempio) -->
+    <section id="team" class="py-20 md:py-32 bg-white mx-auto mt-20 max-w-6xl px-8 md:px-16 rounded-3xl shadow-2xl animate-fadeInUp delay-300">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-blue-900 mb-16 relative">
+                Conosci il Nostro Team di Specialisti
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-blue-600 rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Membro del Team 1 -->
+                <div class="flex flex-col items-center text-center p-8 bg-gray-50 rounded-2xl shadow-xl border border-gray-200 transform hover:scale-102 transition duration-500 ease-in-out animate-fadeInUp delay-100">
+                    <img src="https://placehold.co/200x200/cfe9ff/004c99?text=Dott.+Mario" alt="Dott. Mario Rossi" class="w-44 h-44 rounded-full mb-6 object-cover border-5 border-blue-500 shadow-lg">
+                    <h3 class="text-2xl font-bold text-blue-800">Dott. Mario Rossi</h3>
+                    <p class="text-gray-700 font-medium text-lg mb-3">Medico Chirurgo, Specialista in Medicina Generale</p>
+                    <p class="text-base text-gray-600 leading-relaxed">
+                        Con oltre 20 anni di esperienza, il Dott. Rossi è il fondatore dello studio e un pilastro per la salute dei nostri pazienti, sempre attento e disponibile.
+                    </p>
+                </div>
+                <!-- Membro del Team 2 -->
+                <div class="flex flex-col items-center text-center p-8 bg-gray-50 rounded-2xl shadow-xl border border-gray-200 transform hover:scale-102 transition duration-500 ease-in-out animate-fadeInUp delay-200">
+                    <img src="https://placehold.co/200x200/cfe9ff/004c99?text=Dott.ssa+Anna" alt="Dott.ssa Anna Bianchi" class="w-44 h-44 rounded-full mb-6 object-cover border-5 border-blue-500 shadow-lg">
+                    <h3 class="text-2xl font-bold text-blue-800">Dott.ssa Anna Bianchi</h3>
+                    <p class="text-gray-700 font-medium text-lg mb-3">Specialista in Pediatria</p>
+                    <p class="text-base text-gray-600 leading-relaxed">
+                        La Dott.ssa Bianchi si dedica con passione alla salute dei più piccoli, offrendo un'assistenza completa, attenta e giocosa, promuovendo il loro benessere.
+                    </p>
+                </div>
+                <!-- Membro del Team 3 -->
+                <div class="flex flex-col items-center text-center p-8 bg-gray-50 rounded-2xl shadow-xl border border-gray-200 transform hover:scale-102 transition duration-500 ease-in-out animate-fadeInUp delay-300">
+                    <img src="https://placehold.co/200x200/cfe9ff/004c99?text=Dott.ssa+Giulia" alt="Dott.ssa Giulia Verdi" class="w-44 h-44 rounded-full mb-6 object-cover border-5 border-blue-500 shadow-lg">
+                    <h3 class="text-2xl font-bold text-blue-800">Dott.ssa Giulia Verdi</h3>
+                    <p class="text-gray-700 font-medium text-lg mb-3">Fisioterapista Specializzata</p>
+                    <p class="text-base text-gray-600 leading-relaxed">
+                        Con un approccio innovativo e personalizzato, la Dott.ssa Verdi aiuta i pazienti a recuperare la piena mobilità e a migliorare la qualità della vita.
+                    </p>
+                </div>
+                <!-- Aggiungi altri membri del team se necessario -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Contatti e Orari -->
+    <section id="contatti" class="py-20 md:py-32 bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 mx-auto mt-20 max-w-6xl px-8 md:px-16 rounded-3xl shadow-2xl animate-fadeInUp delay-400">
+        <div class="container mx-auto">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-blue-900 mb-16 relative">
+                Contattaci e Trova lo Studio
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-blue-700 rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <!-- Informazioni di Contatto -->
+                <div class="animate-slideInLeft delay-500">
+                    <h3 class="text-3xl font-bold text-blue-800 mb-6">Informazioni Utili</h3>
+                    <p class="mb-5 text-lg text-gray-700"><strong class="font-bold text-blue-900">Indirizzo:</strong> [Indirizzo Completo del Tuo Studio], [CAP] [Città], [Provincia]</p>
+                    <p class="mb-5 text-lg text-gray-700"><strong class="font-bold text-blue-900">Telefono:</strong> <a href="tel:[Il Tuo Numero di Telefono]" class="text-blue-700 hover:underline transition duration-300 ease-in-out">[Il Tuo Numero di Telefono]</a></p>
+                    <p class="mb-5 text-lg text-gray-700"><strong class="font-bold text-blue-900">Email:</strong> <a href="mailto:[La Tua Email]" class="text-blue-700 hover:underline transition duration-300 ease-in-out">[La Tua Email]</a></p>
+
+                    <h3 class="text-3xl font-bold text-blue-800 mt-12 mb-6">Orari di Apertura</h3>
+                    <ul class="list-none text-lg space-y-4 text-gray-700">
+                        <li class="flex justify-between items-center bg-white p-4 rounded-lg shadow-md border border-gray-100 transform hover:scale-105 transition duration-300 ease-in-out">
+                            <strong class="font-semibold text-blue-900">Lunedì - Venerdì:</strong> <span class="text-gray-800">[Orario Mattina] - [Orario Pomeriggio]</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-white p-4 rounded-lg shadow-md border border-gray-100 transform hover:scale-105 transition duration-300 ease-in-out">
+                            <strong class="font-semibold text-blue-900">Sabato:</strong> <span class="text-gray-800">[Orario Sabato, es. 09:00 - 13:00 o "Chiuso"]</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-white p-4 rounded-lg shadow-md border border-gray-100 transform hover:scale-105 transition duration-300 ease-in-out">
+                            <strong class="font-semibold text-blue-900">Domenica:</strong> <span class="text-gray-800">Chiuso</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mappa Incorporata -->
+                <div class="animate-slideInRight delay-600">
+                    <h3 class="text-3xl font-bold text-blue-800 mb-6">Trova Facilmente il Nostro Studio</h3>
+                    <!-- Inserisci qui il codice embed della tua mappa di Google Maps -->
+                    <!-- Vai su Google Maps, cerca il tuo indirizzo, clicca su "Condividi" -> "Incorpora una mappa" e copia il codice iframe -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.773539824647!2d9.18854031557008!3d45.46465497910107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c381c8c8c8c1%3A0x3b3f3f3f3f3f3f3f!2sPiazza+Duomo%2C+Milano!5e0!3m2!1sit!2sit!4v1625000000000!5m2!1sit!2sit"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="rounded-2xl shadow-3xl border-6 border-blue-300"
+                    ></iframe>
+                    <p class="text-center text-base text-gray-700 mt-6">Clicca sulla mappa per ottenere le indicazioni stradali dettagliate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-white py-12 mt-24 rounded-t-4xl shadow-inner animate-fadeInUp delay-500">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg mb-3 opacity-90">&copy; 2025 Studio Medico [Nome]. Tutti i diritti riservati.</p>
+            <p class="text-base opacity-70 mb-5">Cura, Professionalità e Innovazione al Tuo Servizio. La tua salute, la nostra missione.</p>
+            <div class="flex justify-center space-x-8 text-base">
+                <a href="#" class="hover:text-blue-300 transition duration-300 ease-in-out">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-300 transition duration-300 ease-in-out">Termini e Condizioni</a>
+                <a href="#" class="hover:text-blue-300 transition duration-300 ease-in-out">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
