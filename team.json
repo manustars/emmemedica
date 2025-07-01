@@ -1,0 +1,26 @@
+[
+  {
+    "nome": "Dott. Mario Rossi",
+    "ruolo": "Medico Chirurgo, Specialista in Medicina Generale",
+    "descrizione": "Con oltre 20 anni di esperienza, il Dott. Rossi è il fondatore dello studio e un pilastro per la salute dei nostri pazienti, sempre attento e disponibile.",
+    "img": "https://placehold.co/200x200/cfe9ff/004c99?text=Dott.+Mario"
+  },
+  {
+    "nome": "Dott.ssa Anna Bianchi",
+    "ruolo": "Specialista in Pediatria",
+    "descrizione": "La Dott.ssa Bianchi si dedica con passione alla salute dei più piccoli, offrendo un'assistenza completa, attenta e giocosa, promuovendo il loro benessere.",
+    "img": "https://placehold.co/200x200/cfe9ff/004c99?text=Dott.ssa+Anna"
+  },
+  {
+    "nome": "Dott.ssa Giulia Verdi",
+    "ruolo": "Fisioterapista Specializzata",
+    "descrizione": "Con un approccio innovativo e personalizzato, la Dott.ssa Verdi aiuta i pazienti a recuperare la piena mobilità e a migliorare la qualità della vita.",
+    "img": "https://placehold.co/200x200/cfe9ff/004c99?text=Dott.ssa+Giulia"
+  },
+  {
+    "nome": "Dott. Luca Neri",
+    "ruolo": "Specialista in Cardiologia",
+    "descrizione": "Il Dott. Neri è un esperto in malattie cardiovascolari, dedicato a fornire diagnosi accurate e trattamenti efficaci per la salute del cuore.",
+    "img": "https://placehold.co/200x200/cfe9ff/004c99?text=Dott.+Luca"
+  }
+]

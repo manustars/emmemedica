@@ -1,0 +1,26 @@
+[
+  {
+    "titolo": "Visite Mediche Generali",
+    "descrizione": "Consulenze mediche di base, controllo dello stato di salute generale, rilascio di certificati e prescrizioni. La base per la tua salute."
+  },
+  {
+    "titolo": "Prevenzione e Screening",
+    "descrizione": "Programmi personalizzati per la prevenzione di malattie e screening periodici per una diagnosi precoce, essenziali per il benessere a lungo termine."
+  },
+  {
+    "titolo": "Cardiologia",
+    "descrizione": "Diagnosi e trattamento delle patologie cardiovascolari, ECG, holter pressorio e cardiaco con specialisti dedicati."
+  },
+  {
+    "titolo": "Dermatologia",
+    "descrizione": "Visite dermatologiche complete, mappatura dei nei, trattamenti per varie patologie della pelle con tecnologie avanzate."
+  },
+  {
+    "titolo": "Fisioterapia e Riabilitazione",
+    "descrizione": "Riabilitazione post-traumatica, terapie manuali e strumentali all'avanguardia per il recupero funzionale completo."
+  },
+  {
+    "titolo": "Pediatria",
+    "descrizione": "Visite pediatriche, controlli di crescita, vaccinazioni pediatriche e consulenze approfondite per genitori."
+  }
+]

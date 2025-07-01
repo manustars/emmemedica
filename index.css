@@ -1,0 +1,115 @@
+/* Animazione apertura/chiusura menu mobile */
+#navigation-menu {
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s cubic-bezier(0.4,0,0.2,1);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+#navigation-menu.open {
+    max-height: 500px; /* valore sufficiente per il menu */
+    opacity: 1;
+}
+/* Carousel fade CSS */
+.carousel-fade {
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(0.4,0,0.2,1);
+}
+.carousel-fade.show {
+    opacity: 1;
+}
+/* Stili personalizzati per il font Inter */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; /* Evita lo scroll orizzontale */
+}
+/* Assicurati che lo scroll sia liscio per i link interni */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animazioni personalizzate */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Applica le animazioni a elementi specifici */
+.animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-scaleIn {
+    animation: scaleIn 0.7s ease-out forwards;
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Ritardi per le animazioni sequenziali */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+
+/* Stile per la riga blu sotto i titoli */
+.title-underline {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96px; /* w-24 in Tailwind */
+    height: 6px; /* h-1.5 in Tailwind */
+    background-color: #3b82f6; /* bg-blue-600/700 in Tailwind */
+    border-radius: 9999px; /* rounded-full in Tailwind */
+    /* Regolazione per staccarla dal testo */
+    bottom: -1rem; /* Stacca la linea di 1rem (circa 16px) dal testo */
+}
