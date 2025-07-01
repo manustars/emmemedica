@@ -154,29 +154,34 @@
         </div>
     </section>
 
-    <!-- Sezione Chi Siamo -->
-    <section id="chi-siamo" class="py-20 md:py-32 bg-white shadow-2xl rounded-3xl mx-auto mt-20 max-w-6xl px-8 md:px-16 transform -translate-y-12 animate-fadeInUp">
-        <div class="container mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-blue-900 mb-16 relative">
-                Chi Siamo
-                <span class="title-underline bg-blue-600"></span>
-            </h2>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-16">
-                <div class="md:w-1/2 animate-slideInLeft delay-400">
-                    <p class="text-lg leading-relaxed mb-6 text-gray-700">
-                        Lo Studio Medico [Nome Studio] è un punto di riferimento per la salute e il benessere nella comunità di [La Tua Città]. Fondato nel [Anno di Fondazione], ci dedichiamo a offrire un'assistenza medica di alta qualità, con un'attenzione particolare alle esigenze individuali di ogni paziente, combinando la tradizione medica con le più recenti innovazioni mediche.
-                    </p>
-                    <p class="text-lg leading-relaxed text-gray-700">
-                        Il nostro team di medici e professionisti sanitari è altamente qualificato, costantemente aggiornato sulle ultime scoperte e si impegna a garantire un percorso di cura completo, dalla prevenzione alla diagnosi e al trattamento. Crediamo in un approccio olistico alla salute, dove il paziente è sempre al centro della nostra attenzione, in un ambiente che ispira fiducia, tranquillità e professionalità. La tua salute è la nostra missione.
-                    </p>
-                </div>
-                <div class="md:w-1/2 flex justify-center animate-slideInRight delay-500">
-                    <!-- Placeholder per un'immagine dello studio o del team -->
-                    <img src="https://placehold.co/600x400/b3d9ff/003366?text=Ambiente+Accogliente" alt="Interni dello Studio Medico" class="rounded-2xl shadow-3xl border-6 border-blue-300 transform hover:scale-102 transition duration-500 ease-in-out">
+<!-- Sezione Chi Siamo -->
+<section id="chi-siamo" class="py-20 md:py-32 bg-white shadow-2xl rounded-3xl mx-auto mt-20 max-w-6xl px-8 md:px-16 transform -translate-y-12 animate-fadeInUp">
+    <div class="container mx-auto">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-blue-900 mb-16 relative">
+            Chi Siamo
+            <span class="title-underline bg-blue-600"></span>
+        </h2>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-16">
+            <div class="md:w-1/2 animate-slideInLeft delay-400">
+                <p class="text-lg leading-relaxed mb-6 text-gray-700">
+                    Lo Studio Medico [Nome Studio] è un punto di riferimento per la salute e il benessere nella comunità di [La Tua Città]. Fondato nel [Anno di Fondazione], ci dedichiamo a offrire un'assistenza medica di alta qualità, con un'attenzione particolare alle esigenze individuali di ogni paziente, combinando la tradizione medica con le più recenti innovazioni mediche.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-700">
+                    Il nostro team di medici e professionisti sanitari è altamente qualificato, costantemente aggiornato sulle ultime scoperte e si impegna a garantire un percorso di cura completo, dalla prevenzione alla diagnosi e al trattamento. Crediamo in un approccio olistico alla salute, dove il paziente è sempre al centro della nostra attenzione, in un ambiente che ispira fiducia, tranquillità e professionalità. La tua salute è la nostra missione.
+                </p>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-slideInRight delay-500">
+                <div class="relative w-full max-w-xl h-64 overflow-hidden rounded-2xl shadow-3xl border-4 border-blue-300">
+                    <img id="carousel-img" 
+                         src="img/studio/01_(55).jpg" 
+                         alt="Slideshow Studio" 
+                         class="w-full h-full object-cover transition duration-1000 ease-in-out">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Sezione I Nostri Servizi -->
     <section id="servizi" class="py-20 md:py-32 bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 mx-auto mt-20 max-w-6xl px-8 md:px-16 rounded-3xl shadow-2xl animate-fadeInUp delay-200">
@@ -324,32 +329,48 @@
         </div>
     </footer>
 
-    <script>
-        // JavaScript per la gestione del menu hamburger
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuButton = document.getElementById('menu-button');
-            const navigationMenu = document.getElementById('navigation-menu');
+<script>
+    // JavaScript per la gestione del menu hamburger
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.getElementById('menu-button');
+        const navigationMenu = document.getElementById('navigation-menu');
 
-            if (menuButton && navigationMenu) {
-                menuButton.addEventListener('click', function() {
-                    navigationMenu.classList.toggle('hidden'); // Nasconde/mostra il menu
-                    navigationMenu.classList.toggle('flex'); // Cambia da block a flex per visualizzare gli elementi correttamente su mobile
-                    navigationMenu.classList.toggle('flex-col'); // Assicura che le voci siano in colonna su mobile
-                });
+        if (menuButton && navigationMenu) {
+            menuButton.addEventListener('click', function() {
+                navigationMenu.classList.toggle('hidden'); // Nasconde/mostra il menu
+                navigationMenu.classList.toggle('flex'); // Cambia da block a flex per visualizzare gli elementi correttamente su mobile
+                navigationMenu.classList.toggle('flex-col'); // Assicura che le voci siano in colonna su mobile
+            });
 
-                // Chiudi il menu quando si clicca su un link (utile su mobile)
-                const navLinks = navigationMenu.querySelectorAll('a');
-                navLinks.forEach(link => {
-                    link.addEventListener('click', function() {
-                        // Nasconde il menu solo se è visibile e lo schermo è piccolo
-                        if (window.innerWidth < 768 && !navigationMenu.classList.contains('hidden')) { // Corrisponde a md: in Tailwind
-                            navigationMenu.classList.add('hidden');
-                            navigationMenu.classList.remove('flex');
-                        }
-                    });
+            // Chiudi il menu quando si clicca su un link (utile su mobile)
+            const navLinks = navigationMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Nasconde il menu solo se è visibile e lo schermo è piccolo
+                    if (window.innerWidth < 768 && !navigationMenu.classList.contains('hidden')) { // Corrisponde a md: in Tailwind
+                        navigationMenu.classList.add('hidden');
+                        navigationMenu.classList.remove('flex');
+                    }
                 });
-            }
-        });
-    </script>
+            });
+        }
+
+        // Carousel immagini
+        const images = [
+            "img/studio/01_(53).jpg",
+            "img/studio/01_(54).jpg",
+            "img/studio/01_(55).jpg"
+        ];
+        let current = 0;
+        const imgElement = document.getElementById("carousel-img");
+
+        if (imgElement) {
+            setInterval(() => {
+                current = (current + 1) % images.length;
+                imgElement.src = images[current];
+            }, 4000); // Cambia immagine ogni 4 secondi
+        }
+    });
+</script>
 </body>
 </html>
