@@ -3,11 +3,69 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>EMMEMEDICA - Il centro della salute</title>
+        <title>EMMEMEDICA - Centro Medico Polispecialistico e Fisioterapico a Grottaferrata</title>
+        <meta name="description" content="Emmemedica è il centro medico polispecialistico e fisioterapico di riferimento a Grottaferrata (Roma). Visite specialistiche, fisioterapia, prevenzione, diagnostica e un team di professionisti per la tua salute.">
+        <meta name="keywords" content="emmemedica, centro medico, grottaferrata, fisioterapia, visite specialistiche, poliambulatorio, prevenzione, salute, medici, diagnostica, roma">
+        <meta name="author" content="Emmemedica">
+        <meta property="og:title" content="EMMEMEDICA - Centro Medico Polispecialistico e Fisioterapico a Grottaferrata">
+        <meta property="og:description" content="Emmemedica: salute, prevenzione e innovazione. Visite specialistiche, fisioterapia e diagnostica a Grottaferrata (Roma). Scopri i nostri servizi e il nostro team.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.emmemedica.it/">
+        <meta property="og:image" content="https://www.emmemedica.it/img/logo-og.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="EMMEMEDICA - Centro Medico Polispecialistico e Fisioterapico a Grottaferrata">
+        <meta name="twitter:description" content="Emmemedica: salute, prevenzione e innovazione. Visite specialistiche, fisioterapia e diagnostica a Grottaferrata (Roma). Scopri i nostri servizi e il nostro team.">
+        <meta name="twitter:image" content="https://www.emmemedica.it/img/logo-og.jpg">
+        <link rel="canonical" href="https://www.emmemedica.it/">
         <!-- Tailwind CSS CDN per uno styling rapido e responsive -->
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+        <meta name="robots" content="index, follow">
+        <meta name="google" content="notranslate">
+        <meta name="theme-color" content="#1e3a8a">
+        <!-- Dati strutturati JSON-LD -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "MedicalClinic",
+          "name": "Emmemedica",
+          "image": "https://www.emmemedica.it/img/01_(53).jpg",
+          "@id": "https://www.emmemedica.it/",
+          "url": "https://www.emmemedica.it/",
+          "telephone": "+390695210090",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via Del Fico 74/A",
+            "addressLocality": "Grottaferrata",
+            "addressRegion": "RM",
+            "postalCode": "00046",
+            "addressCountry": "IT"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 41.789374,
+            "longitude": 12.6746
+          },
+          "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "20:00"
+          }],
+          "sameAs": [
+            "https://www.facebook.com/emmemedica.clinic"
+          ]
+        }
+        </script>
     </head>
     <body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 text-gray-800">
 
@@ -167,14 +225,39 @@
             <div class="container mx-auto px-6 text-center">
                 <p class="text-lg mb-3 opacity-90">&copy; 2025 EMMEMEDICA. Tutti i diritti riservati.</p>
                 <p class="text-base opacity-70 mb-5">Cura, Professionalità e Innovazione al Tuo Servizio. La tua salute, la nostra missione.</p>
-                <div class="flex justify-center space-x-8 text-base">
+                <div class="flex justify-center space-x-8 text-base mb-4">
                     <a href="#" class="hover:text-blue-300 transition duration-300 ease-in-out">Privacy Policy</a>
                     <a href="#" class="hover:text-blue-300 transition duration-300 ease-in-out">Termini e Condizioni</a>
                     <a href="#" class="hover:text-blue-300 transition duration-300 ease-in-out">Cookie Policy</a>
+                </div>
+                <div class="flex justify-center space-x-6 mt-2">
+                    <a href="https://www.facebook.com/emmemedica.clinic" target="_blank" rel="noopener" aria-label="Facebook" class="transition duration-300 text-2xl">
+                        <span class="inline-block align-middle w-7 h-7 rounded-full bg-blue-600 hover:bg-blue-700 transition duration-300 flex items-center justify-center">
+                          <svg viewBox="0 0 50 50" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="24" fill="#1877F3"/>
+                            <path d="M32.5 25.5h-5v13h-5v-13h-3v-4h3v-2.5c0-3.1 1.7-5 5-5h4v4h-3c-1 0-1 .4-1 1v2.5h4l-1 4z" fill="#fff"/>
+                          </svg>
+                        </span>
+                    </a>
+                    <!--
+                    <a href="#" aria-label="Instagram" class="text-pink-400 hover:text-pink-200 transition duration-300 text-2xl">
+                        <svg ...></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="text-blue-700 hover:text-blue-400 transition duration-300 text-2xl">
+                        <svg ...></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="text-red-600 hover:text-red-400 transition duration-300 text-2xl">
+                        <svg ...></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="text-blue-400 hover:text-blue-200 transition duration-300 text-2xl">
+                        <svg ...></svg>
+                    </a>
+                    -->
                 </div>
             </div>
         </footer>
 
     <script src="index.js"></script>
+    <!-- <script src="analytics-ads.js"></script> -->
     </body>
 </html>
