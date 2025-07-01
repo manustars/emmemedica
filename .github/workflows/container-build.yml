@@ -13,6 +13,7 @@ on:
       - 'servizi.json'
       - 'analytics-ads.js'
       - 'img/**'
+      - '.github\workflows\container-build.yml'
   workflow_dispatch:
 
 jobs:
