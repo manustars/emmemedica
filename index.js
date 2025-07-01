@@ -6,16 +6,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (menuButton && navigationMenu) {
         // Inizializza lo stato del menu
-
-        // Stato iniziale: menu chiuso e pronto per animazione
-        if (window.innerWidth < 768) {
-            navigationMenu.classList.remove('open');
-            navigationMenu.classList.remove('flex');
-            navigationMenu.classList.remove('flex-col');
-            navigationMenu.classList.add('hidden');
+        function setMenuState() {
+            if (window.innerWidth < 768) {
+                navigationMenu.classList.remove('open');
+                navigationMenu.classList.remove('flex');
+                navigationMenu.classList.remove('flex-col');
+                navigationMenu.classList.add('hidden');
+            } else {
+                navigationMenu.classList.remove('hidden');
+                navigationMenu.classList.remove('open');
+                navigationMenu.classList.remove('flex');
+                navigationMenu.classList.remove('flex-col');
+                navigationMenu.style.display = '';
+                // Forza la visualizzazione della navbar in desktop
+                navigationMenu.style.visibility = 'visible';
+                navigationMenu.style.opacity = '1';
+            }
         }
+        setMenuState();
+        window.addEventListener('resize', setMenuState);
 
         menuButton.addEventListener('click', function() {
+            if (window.innerWidth >= 768) return; // Non fare nulla su desktop
             if (navigationMenu.classList.contains('hidden')) {
                 navigationMenu.classList.remove('hidden');
                 // Forza reflow per permettere la transizione su apertura
@@ -26,9 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 navigationMenu.classList.remove('open');
                 setTimeout(() => {
-                    navigationMenu.classList.add('hidden');
-                    navigationMenu.classList.remove('flex');
-                    navigationMenu.classList.remove('flex-col');
+                    // Solo su mobile nascondi
+                    if (window.innerWidth < 768) {
+                        navigationMenu.classList.add('hidden');
+                        navigationMenu.classList.remove('flex');
+                        navigationMenu.classList.remove('flex-col');
+                    }
                 }, 400); // deve corrispondere alla durata della transizione CSS
             }
         });
@@ -36,7 +51,22 @@ document.addEventListener('DOMContentLoaded', function() {
         // Chiudi il menu quando si clicca su un link (utile su mobile)
         const navLinks = navigationMenu.querySelectorAll('a');
         navLinks.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function(e) {
+                // Scroll personalizzato per compensare l'altezza dell'header sticky
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        const header = document.querySelector('header');
+                        const headerHeight = header ? header.offsetHeight : 0;
+                        const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 8; // 8px extra per aria
+                        window.scrollTo({
+                            top: targetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
                 if (window.innerWidth < 768 && navigationMenu.classList.contains('open')) {
                     navigationMenu.classList.remove('open');
                     setTimeout(() => {

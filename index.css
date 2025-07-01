@@ -4,10 +4,21 @@
     overflow: hidden;
     max-height: 0;
     opacity: 0;
+    z-index: 100;
 }
 #navigation-menu.open {
     max-height: 500px; /* valore sufficiente per il menu */
     opacity: 1;
+}
+
+@media (min-width: 768px) {
+    #navigation-menu {
+        max-height: none !important;
+        opacity: 1 !important;
+        overflow: visible;
+        z-index: auto;
+        position: static;
+    }
 }
 /* Carousel fade CSS */
 .carousel-fade {
