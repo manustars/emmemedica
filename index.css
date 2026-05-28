@@ -20,13 +20,22 @@
         position: static;
     }
 }
-/* Carousel fade CSS */
+/* Carousel: dissolvenza */
 .carousel-fade {
     opacity: 0;
-    transition: opacity 1s cubic-bezier(0.4,0,0.2,1);
+    transition: opacity 0.4s ease-in-out;
 }
 .carousel-fade.show {
     opacity: 1;
+}
+
+/* Ken Burns: lento pan orizzontale */
+@keyframes carousel-pan {
+    from { transform: scale(1.08) translateX(4%); }
+    to   { transform: scale(1.08) translateX(-4%); }
+}
+.carousel-pan {
+    animation: carousel-pan 10s ease-in-out forwards;
 }
 /* Stili personalizzati per il font Inter */
 body {
@@ -111,6 +120,37 @@ html {
 .delay-600 { animation-delay: 0.6s; }
 .delay-700 { animation-delay: 0.7s; }
 .delay-800 { animation-delay: 0.8s; }
+
+/* Modale */
+#modal-overlay {
+    animation: fadeIn 0.2s ease-out;
+}
+#modal-overlay.hidden {
+    display: none !important;
+}
+.modal-box {
+    animation: scaleInModal 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes scaleInModal {
+    from { opacity: 0; transform: scale(0.95) translateY(10px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Cookie banner */
+#cookie-banner {
+    animation: slideUpBanner 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#cookie-banner.hidden {
+    display: none !important;
+}
+@keyframes slideUpBanner {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
 
 /* Stile per la riga blu sotto i titoli */
 .title-underline {

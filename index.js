@@ -80,26 +80,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // Carousel immagini con dissolvenza solo CSS
+    // Carousel: dissolvenza + pan orizzontale (Ken Burns)
     const images = [
         "img/studio/01_(53).jpg",
         "img/studio/01_(54).jpg",
         "img/studio/01_(55).jpg"
     ];
     let current = 0;
-    const imgElement = document.getElementById("carousel-img");
+    const imgEl = document.getElementById('carousel-img');
 
-    if (imgElement) {
-        imgElement.classList.add('carousel-fade');
+    function restartPan() {
+        imgEl.classList.remove('carousel-pan');
+        void imgEl.offsetWidth;
+        imgEl.classList.add('carousel-pan');
+    }
+
+    if (imgEl) {
+        imgEl.classList.add('carousel-fade');
+        setTimeout(() => { imgEl.classList.add('show'); restartPan(); }, 10);
+
         setInterval(() => {
-            imgElement.classList.remove('show');
+            imgEl.classList.remove('show');
             setTimeout(() => {
                 current = (current + 1) % images.length;
-                imgElement.src = images[current];
-                imgElement.classList.add('show');
-            }, 500);
-        }, 4000);
-        setTimeout(() => imgElement.classList.add('show'), 10);
+                imgEl.src = images[current];
+                imgEl.classList.add('show');
+                restartPan();
+            }, 400);
+        }, 9000);
     }
 
     // --- TEAM DINAMICO ---
@@ -121,6 +129,60 @@ document.addEventListener('DOMContentLoaded', function() {
                 container.appendChild(div);
             });
         });
+
+    // --- MODALE PRIVACY / TERMINI ---
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalTitle   = document.getElementById('modal-title');
+    const modalBody    = document.getElementById('modal-body');
+    const modalClose   = document.getElementById('modal-close');
+
+    function openModal(jsonFile) {
+        fetch(jsonFile)
+            .then(r => r.json())
+            .then(data => {
+                modalTitle.textContent = data.titolo;
+                modalBody.innerHTML = data.sezioni.map(s => `
+                    <div>
+                        <h3 class="font-semibold text-blue-800 mb-2">${s.titolo}</h3>
+                        <p class="whitespace-pre-line">${s.testo}</p>
+                    </div>
+                `).join('');
+                modalOverlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+    }
+
+    function closeModal() {
+        modalOverlay.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('link-privacy')?.addEventListener('click', e => { e.preventDefault(); openModal('privacy-policy.json'); });
+    document.getElementById('link-termini')?.addEventListener('click', e => { e.preventDefault(); openModal('termini-condizioni.json'); });
+    modalClose?.addEventListener('click', closeModal);
+    modalOverlay?.addEventListener('click', e => { if (e.target === modalOverlay || e.target.classList.contains('modal-backdrop')) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // --- BANNER COOKIE ---
+    const cookieBanner = document.getElementById('cookie-banner');
+
+    function showCookieBanner() {
+        if (!localStorage.getItem('cookie-consent')) {
+            cookieBanner.classList.remove('hidden');
+        }
+    }
+
+    document.getElementById('cookie-accept')?.addEventListener('click', () => {
+        localStorage.setItem('cookie-consent', 'accepted');
+        cookieBanner.classList.add('hidden');
+    });
+    document.getElementById('cookie-decline')?.addEventListener('click', () => {
+        localStorage.setItem('cookie-consent', 'declined');
+        cookieBanner.classList.add('hidden');
+    });
+    document.getElementById('cookie-privacy-link')?.addEventListener('click', e => { e.preventDefault(); openModal('privacy-policy.json'); });
+
+    setTimeout(showCookieBanner, 800);
 
     // --- SERVIZI DINAMICI ---
     fetch('servizi.json')

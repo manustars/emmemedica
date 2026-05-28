@@ -1,0 +1,33 @@
+{
+  "titolo": "Privacy Policy",
+  "sezioni": [
+    {
+      "titolo": "1. Titolare del trattamento",
+      "testo": "Il Titolare del trattamento dei dati personali è Emmemedica S.r.l., con sede in Via Del Fico 74/A, 00046 Grottaferrata (RM). Per qualsiasi informazione relativa al trattamento dei dati è possibile contattarci all'indirizzo e-mail: info@emmemedica.it oppure telefonicamente al numero +39 06 95210090."
+    },
+    {
+      "titolo": "2. Tipologie di dati raccolti",
+      "testo": "Il Sito raccoglie i seguenti dati personali, direttamente forniti dall'utente o acquisiti automaticamente durante la navigazione:\n\n• Dati di navigazione: indirizzi IP, tipo di browser, sistema operativo, pagine visitate, orari di accesso. Tali dati sono utilizzati esclusivamente per finalità statistiche anonime e per verificare il corretto funzionamento del sito.\n\n• Dati forniti volontariamente: nome, cognome, indirizzo e-mail, numero di telefono e qualsiasi altra informazione inserita nei moduli di contatto o nelle comunicazioni via e-mail."
+    },
+    {
+      "titolo": "3. Finalità e base giuridica del trattamento",
+      "testo": "I dati personali sono trattati per le seguenti finalità:\n\n• Rispondere alle richieste di informazioni o di prenotazione inviate dall'utente (base giuridica: esecuzione di misure precontrattuali).\n• Adempiere agli obblighi di legge in materia sanitaria e fiscale (base giuridica: obbligo legale).\n• Inviare comunicazioni di carattere informativo o promozionale, previo consenso esplicito dell'interessato (base giuridica: consenso)."
+    },
+    {
+      "titolo": "4. Modalità di trattamento e conservazione",
+      "testo": "I dati sono trattati con strumenti informatici e cartacei, nel rispetto delle misure di sicurezza previste dal Regolamento UE 2016/679 (GDPR). I dati saranno conservati per il tempo strettamente necessario al conseguimento delle finalità per cui sono stati raccolti e comunque nel rispetto dei termini di conservazione previsti dalla normativa vigente."
+    },
+    {
+      "titolo": "5. Comunicazione e diffusione dei dati",
+      "testo": "I dati personali non sono diffusi a terzi. Possono essere comunicati a soggetti che forniscono servizi strumentali all'attività del Titolare (es. provider di hosting, fornitori di software gestionale), i quali operano in qualità di Responsabili del trattamento ai sensi dell'art. 28 GDPR."
+    },
+    {
+      "titolo": "6. Diritti dell'interessato",
+      "testo": "L'interessato ha diritto di:\n\n• Accedere ai propri dati personali (art. 15 GDPR).\n• Ottenere la rettifica o la cancellazione dei dati (artt. 16-17 GDPR).\n• Chiedere la limitazione del trattamento (art. 18 GDPR).\n• Opporsi al trattamento (art. 21 GDPR).\n• Ricevere i dati in formato strutturato e leggibile (portabilità, art. 20 GDPR).\n• Revocare il consenso in qualsiasi momento, senza pregiudicare la liceità del trattamento basato sul consenso prestato prima della revoca.\n\nLe richieste possono essere inviate a: info@emmemedica.it"
+    },
+    {
+      "titolo": "7. Modifiche alla presente informativa",
+      "testo": "Il Titolare si riserva il diritto di modificare la presente Privacy Policy in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina con indicazione della data di aggiornamento. Si invita pertanto a consultare periodicamente questa sezione."
+    }
+  ]
+}

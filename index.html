@@ -123,8 +123,8 @@
                     Chi Siamo
                     <span class="title-underline bg-blue-600"></span>
                 </h2>
-                <div class="flex flex-col md:flex-row items-center justify-center gap-16">
-                    <div class="md:w-1/2 animate-slideInLeft delay-400">
+                <div class="flex flex-col gap-12">
+                    <div class="animate-slideInLeft delay-400">
                         <p class="text-lg leading-relaxed mb-6 text-gray-700">
                             <strong>Emme Medica</strong> nasce nel 2018 con l’obiettivo di offrire servizi sanitari specialistici di alta qualità, mettendo al centro la persona, la prevenzione e il benessere globale. La nostra missione è garantire cure accessibili, professionali e tempestive attraverso un approccio umano, multidisciplinare e orientato all’eccellenza medica.
                             <br><br>
@@ -141,12 +141,12 @@
                             Per noi la salute è un equilibrio tra <strong>prevenzione</strong>, <strong>diagnosi</strong>, <strong>cura</strong> e <strong>benessere quotidiano</strong>.
                         </p>
                     </div>
-                    <div class="md:w-1/2 flex justify-center animate-slideInRight delay-500">
-                        <div class="relative w-full max-w-xl h-64 overflow-hidden rounded-2xl shadow-3xl border-4 border-blue-300">
-                            <img id="carousel-img" 
-                                src="img/studio/01_(55).jpg" 
-                                alt="Slideshow Studio" 
-                                class="w-full h-full object-cover transition duration-1000 ease-in-out">
+                    <div class="flex justify-center animate-slideInRight delay-500">
+                        <div class="relative w-full h-64 md:h-96 overflow-hidden rounded-2xl shadow-3xl border-4 border-blue-300">
+                            <img id="carousel-img"
+                                src="img/studio/01_(55).jpg"
+                                alt="Slideshow Studio"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -235,9 +235,8 @@
                 <p class="text-lg mb-3 opacity-90">&copy; 2025 EMMEMEDICA. Tutti i diritti riservati.</p>
                 <p class="text-base opacity-70 mb-5">Cura, Professionalità e Innovazione al Tuo Servizio. La tua salute, la nostra missione.</p>
                 <div class="flex justify-center space-x-8 text-base mb-4">
-                    <a href="#" class="hover:text-blue-300 transition duration-300 ease-in-out">Privacy Policy</a>
-                    <a href="#" class="hover:text-blue-300 transition duration-300 ease-in-out">Termini e Condizioni</a>
-                    <a href="#" class="hover:text-blue-300 transition duration-300 ease-in-out">Cookie Policy</a>
+                    <a href="#" id="link-privacy" class="hover:text-blue-300 transition duration-300 ease-in-out">Privacy Policy</a>
+                    <a href="#" id="link-termini" class="hover:text-blue-300 transition duration-300 ease-in-out">Termini e Condizioni</a>
                 </div>
                 <div class="flex justify-center space-x-6 mt-2">
                     <a href="https://www.facebook.com/emmemedica.clinic" target="_blank" rel="noopener" aria-label="Facebook" class="transition duration-300 text-2xl">
@@ -265,6 +264,33 @@
                 </div>
             </div>
         </footer>
+
+    <!-- Modale Privacy / Termini -->
+    <div id="modal-overlay" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="modal-backdrop absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="modal-box relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[85vh] flex flex-col z-10">
+            <div class="flex justify-between items-center px-8 py-5 border-b border-gray-200">
+                <h2 id="modal-title" class="text-xl font-bold text-blue-900"></h2>
+                <button id="modal-close" class="text-gray-400 hover:text-gray-700 text-3xl leading-none transition duration-200">&times;</button>
+            </div>
+            <div id="modal-body" class="overflow-y-auto px-8 py-6 text-gray-700 text-sm leading-relaxed space-y-6"></div>
+        </div>
+    </div>
+
+    <!-- Banner Cookie -->
+    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 z-40 bg-gray-900 text-white px-6 py-5 shadow-2xl">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-gray-300 leading-relaxed">
+                Questo sito utilizza cookie tecnici per garantire il corretto funzionamento e migliorare la tua esperienza di navigazione.
+                Per maggiori informazioni consulta la nostra
+                <a href="#" id="cookie-privacy-link" class="underline text-blue-300 hover:text-blue-200 transition">Privacy Policy</a>.
+            </p>
+            <div class="flex gap-3 flex-shrink-0">
+                <button id="cookie-decline" class="px-5 py-2 rounded-full border border-gray-500 text-gray-300 hover:bg-gray-700 text-sm transition duration-200">Rifiuta</button>
+                <button id="cookie-accept" class="px-5 py-2 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition duration-200">Accetta</button>
+            </div>
+        </div>
+    </div>
 
     <script src="index.js"></script>
     <!-- <script src="analytics-ads.js"></script> -->

@@ -1,0 +1,33 @@
+{
+  "titolo": "Termini e Condizioni",
+  "sezioni": [
+    {
+      "titolo": "1. Accettazione dei termini",
+      "testo": "L'accesso e l'utilizzo del sito web www.emmemedica.it implicano l'accettazione integrale dei presenti Termini e Condizioni d'uso. Qualora non si accettino tali condizioni, si prega di non utilizzare il sito. Emmemedica si riserva il diritto di modificare i presenti termini in qualsiasi momento; le modifiche entrano in vigore dalla data di pubblicazione sul sito."
+    },
+    {
+      "titolo": "2. Servizi offerti",
+      "testo": "Il sito ha finalità informativa e consente agli utenti di:\n\n• Prendere visione dei servizi sanitari e fisioterapici offerti dal centro.\n• Conoscere il team di professionisti operanti nella struttura.\n• Contattare la struttura per richieste di informazioni e prenotazioni.\n\nLe informazioni mediche presenti nel sito hanno carattere puramente divulgativo e non sostituiscono in nessun caso il parere medico professionale."
+    },
+    {
+      "titolo": "3. Proprietà intellettuale",
+      "testo": "Tutti i contenuti presenti nel sito (testi, immagini, loghi, grafica, codice sorgente) sono di proprietà esclusiva di Emmemedica o dei rispettivi titolari dei diritti e sono protetti dalla normativa vigente in materia di diritto d'autore. È vietata qualsiasi riproduzione, distribuzione, modifica o utilizzo commerciale dei contenuti senza previa autorizzazione scritta da parte di Emmemedica."
+    },
+    {
+      "titolo": "4. Limitazione di responsabilità",
+      "testo": "Emmemedica si impegna a mantenere le informazioni presenti nel sito aggiornate e accurate, ma non garantisce la completezza, l'esattezza o l'attualità dei contenuti. Emmemedica non è responsabile per eventuali danni diretti o indiretti derivanti dall'utilizzo del sito o dall'impossibilità di accedervi, né per danni causati da virus informatici o altri elementi dannosi che possano infettare l'apparecchiatura dell'utente a seguito dell'accesso al sito."
+    },
+    {
+      "titolo": "5. Link a siti esterni",
+      "testo": "Il sito può contenere link a siti web di terze parti. Tali link sono forniti a titolo informativo e Emmemedica non è responsabile del contenuto, della correttezza o della sicurezza dei siti esterni collegati. La presenza di un link non implica alcuna forma di approvazione o raccomandazione da parte di Emmemedica."
+    },
+    {
+      "titolo": "6. Prenotazioni e informazioni sanitarie",
+      "testo": "Le richieste di prenotazione o di informazioni sanitarie inviate tramite il sito non costituiscono un rapporto medico-paziente. Tale rapporto si instaura esclusivamente al momento della visita presso la struttura, previo consenso informato. Emmemedica si riserva il diritto di non accettare prenotazioni in qualsiasi momento e per qualsiasi motivo."
+    },
+    {
+      "titolo": "7. Legge applicabile e foro competente",
+      "testo": "I presenti Termini e Condizioni sono regolati dalla legge italiana. Per qualsiasi controversia derivante dall'interpretazione o dall'esecuzione dei presenti termini, le parti concordano che il foro competente sarà quello di Roma, salvo diversa disposizione di legge a favore del consumatore."
+    }
+  ]
+}
